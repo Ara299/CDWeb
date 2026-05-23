@@ -77,7 +77,7 @@ const Footer = () => {
                         <div className="space-y-6">
                             <div>
                                 <h3 className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent mb-4">
-                                    MOGGO
+                                    MØNVÉ
                                 </h3>
                                 <p className="text-gray-300 leading-relaxed text-sm">
                                     {t('footer.brand_description')} 
@@ -150,7 +150,7 @@ const Footer = () => {
                                 </div>
                                 <div className="flex items-center text-gray-300 text-sm group">
                                     <FiMail className="mr-3 text-amber-400 group-hover:scale-110 transition-transform" />
-                                    <span>info@moggo.com</span>
+                                    <span>info@monve.com</span>
                                 </div>
                                 <div className="flex items-center text-gray-300 text-sm group">
                                     <FiClock className="mr-3 text-amber-400 group-hover:scale-110 transition-transform" />
@@ -215,7 +215,7 @@ const Footer = () => {
                         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
                                 <p className="text-gray-400 text-sm">
-                                    &copy; {new Date().getFullYear()} MOGGO Fashion. {t('footer.bottom_bar.all_rights_reserved')} 
+                                    &copy; {new Date().getFullYear()} MØNVÉ Fashion. {t('footer.bottom_bar.all_rights_reserved')} 
                                 </p>
                                 <div className="flex items-center space-x-4 text-xs text-gray-500">
                                     <span>{t('footer.bottom_bar.made_with')}</span> 

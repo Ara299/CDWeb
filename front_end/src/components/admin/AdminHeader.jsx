@@ -180,7 +180,7 @@ const AdminHeader = () => {
                         <div className="flex items-center space-x-4">
                             <Link to="/admin/products"> {/* Thay đổi link từ /admin/dashboard sang /admin/products */}
                                 <h1 className="text-2xl font-bold text-indigo-900 hover:text-purple-900 transition-colors duration-300">
-                                    Moggo Admin
+                                    MØNVÉ Admin
                                 </h1>
                             </Link>
                         </div>

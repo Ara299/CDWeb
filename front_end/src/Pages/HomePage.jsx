@@ -6,8 +6,8 @@ import ProductCard from '../components/product/ProductCard';
 import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop&crop=center';
-const MEN_IMAGE = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=center';
-const WOMEN_IMAGE = 'https://images.unsplash.com/photo-1494790108755-2616c5e8f3ee?w=600&h=400&fit=crop&crop=center';
+const MEN_IMAGE = 'https://images.unsplash.com/photo-1626399320650-f70568ac0ffe?w=600&h=400&fit=crop&crop=center';
+const WOMEN_IMAGE = 'https://images.unsplash.com/photo-1483985988355-763728e1935b?fit=crop&w=600&h=400';
 const CASUAL_IMAGE = 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1200&h=600&fit=crop&crop=center';
 
 function HomePage() {
@@ -22,12 +22,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   // Auto-slide for hero banner
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+
 
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
@@ -132,10 +127,7 @@ function HomePage() {
                     <p className="text-lg mb-8 opacity-80 max-w-2xl mx-auto">
                       {slide.description}
                     </p>
-                    <button className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-900 font-bold rounded-full shadow-2xl hover:shadow-white/25 hover:scale-105 transition-all duration-300 text-lg">
-                      {slide.cta}
-                      <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </button>
+                    
                   </div>
                 </div>
               </div>

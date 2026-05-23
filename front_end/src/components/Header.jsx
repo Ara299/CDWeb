@@ -170,16 +170,16 @@ const Header = () => {
     };
 
     return (
-        <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
+        <header className="sticky top-0 z-50 bg-[#FAF7F2]/95 backdrop-blur-md shadow-sm border-b border-gray-100">
             {/* Elegant Top Bar */}
-            <div className="bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 py-3 hidden md:block">
+            <div className="bg-[#242021] py-3 hidden md:block">
                 <div className="container mx-auto px-6">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-8 text-sm">
                             <div
                                 className="flex items-center text-gray-300 hover:text-white transition-all duration-300 group">
                                 <MdEmail className="mr-2 text-amber-400 group-hover:scale-110 transition-transform"/>
-                                <span className="font-light">info@moggo.com</span>
+                                <span className="font-light">info@monve.com</span>
                             </div>
                             <div
                                 className="flex items-center text-gray-300 hover:text-white transition-all duration-300 group">
@@ -339,7 +339,7 @@ const Header = () => {
                         <div className="flex items-center">
                             <Link to="/" className="group">
                                 <h1 className="text-4xl font-bold bg-gradient-to-r from-slate-900 via-gray-800 to-slate-900 bg-clip-text text-transparent hover:from-amber-600 hover:via-orange-500 hover:to-amber-600 transition-all duration-500 tracking-tight">
-                                    MOGGO
+                                    MØNVÉ
                                 </h1>
                                 <div
                                     className="h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
