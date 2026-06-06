@@ -392,7 +392,7 @@ const Header = () => {
                                         }}
                                         className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-gray-400 hover:text-amber-600 transition-colors duration-300 rounded-full hover:bg-amber-50"
                                     >
-                                        <FiSearch className="w-4 h-4"/>
+                                        <FiMic className="w-4 h-4"/>
                                     </button>
                                     {isSearchFocused && results.length > 0 && (
                                         <div className="absolute top-full left-0 mt-2 w-full bg-white shadow-lg rounded-lg z-50 max-h-96 overflow-y-auto">

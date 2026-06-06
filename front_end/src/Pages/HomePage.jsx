@@ -111,10 +111,17 @@ function HomePage() {
                 <div className={`absolute inset-0 bg-gradient-to-r ${slide.gradient}`}>
                   <div className="absolute inset-0 bg-black/20"></div>
                 </div>
-                <div
-                    className="absolute inset-0 bg-cover bg-center mix-blend-overlay"
-                    style={{ backgroundImage: `url(${HERO_IMAGE})` }}
-                ></div>
+                <div className="absolute inset-0 overflow-hidden">
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="https://videos.pexels.com/video-files/8306450/8306450-uhd_2732_1440_25fps.mp4" type="video/mp4" />
+                    </video>
+                </div>
 
                 <div className="relative z-10 h-full flex items-center justify-center text-white text-center px-4">
                   <div className="max-w-4xl mx-auto">

@@ -10,8 +10,24 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const AuthPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
+    <div className="min-h-screen flex items-center justify-center"  style={{
+          backgroundImage:
+            "url('https://images.pexels.com/photos/5560203/pexels-photo-5560203.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}>
+      <div
+        className="
+          max-w-md
+          w-full
+          p-8
+          rounded-xl
+          bg-black/30 backdrop-blur-lg
+          backdrop-blur-md
+          border border-white/20
+        "
+      >
         <AnimatePresence mode="wait">
           <motion.div
             // key={isVerificationSent ? "verification" : authState}
