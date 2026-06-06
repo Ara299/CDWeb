@@ -1,7 +1,7 @@
 import axiosClient from "./axiosClient";
 
 const listCartItem = async (body) => {
-    return await axiosClient.get('/cart/listCartItem', {
+    return await axiosClient.get('/cart/listCartItem/' + body.userId, {
         headers: {
             Authorization: `Bearer ${body.token}`
         }

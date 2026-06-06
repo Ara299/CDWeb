@@ -26,7 +26,13 @@ const ProductInfo = ({ product, reviewsCount }) => {
   const isInStock = product.variants && product.variants.some(v => v.stock > 0);
 
   return (
-      <div className="space-y-6">
+      <div className="space-y-6" style={{
+        fontFamily: "'DM Sans', sans-serif",
+        background: '#DFFFD6',
+        borderRadius: 20,
+        padding: '2rem 2rem 1.75rem',
+        maxWidth: 520,
+      }}>
         {/* Brand */}
         {product.brand && (
             <div className="flex items-center gap-3">

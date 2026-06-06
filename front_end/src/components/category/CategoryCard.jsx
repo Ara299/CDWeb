@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowUpRight, FiShoppingBag } from 'react-icons/fi';
+import {useTranslation} from "react-i18next";
 
 const PLACEHOLDER_IMAGE_URL = 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=600&fit=crop&crop=center';
 
 const CategoryCard = ({ category, genderSlug }) => {
   const imageUrl = category?.categoryImage?.imageUrl || PLACEHOLDER_IMAGE_URL;
   const imageAltText = category?.categoryImage?.altText || category?.name || 'Fashion Category';
+  const {t} = useTranslation();
 
   return (
       <Link
@@ -42,28 +44,29 @@ const CategoryCard = ({ category, genderSlug }) => {
                 </div>
               </div>
           )}
-        </div>
+          {/* Content Section */}
+          <div className="absolute bottom-0 left-0 w-full p-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300">
+            {/* Category Name */}
+            <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1 group-hover:text-white transition-colors duration-200">
+              {category?.name || 'Fashion Category'}
+            </h3>
 
-        {/* Content Section */}
-        <div className="p-6">
-          {/* Category Name */}
-          <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1 group-hover:text-black transition-colors duration-200">
-            {category?.name || 'Fashion Category'}
-          </h3>
+            {/* Description */}
+            {category?.description && (
+                <p className="text-sm text-white line-clamp-2 leading-relaxed">
+                  {category.description}
+                </p>
+            )}
 
-          {/* Description */}
-          {category?.description && (
-              <p className="text-sm text-gray-600 line-clamp-2 leading-relaxed">
-                {category.description}
-              </p>
-          )}
-
-          {/* Hover Effect Underline */}
-          <div className="mt-4 flex items-center text-sm font-medium text-gray-900 group-hover:text-black">
-            <span>Khám phá</span>
-            <div className="ml-2 h-px flex-1 bg-gray-200 group-hover:bg-gray-900 transition-colors duration-300" />
+            {/* Hover Effect Underline */}
+            <div className="mt-4 flex items-center text-sm font-medium text-gray-900 group-hover:text-white">
+              <span>{t('category_list.category_card.discover')}</span>
+              <div className="ml-2 h-px flex-1 bg-gray-200 group-hover:bg-white transition-colors duration-300" />
+            </div>
           </div>
         </div>
+
+        
       </Link>
   );
 };

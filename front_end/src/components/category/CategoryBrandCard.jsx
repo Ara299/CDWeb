@@ -5,7 +5,7 @@ import { FiArrowUpRight, FiShoppingBag } from 'react-icons/fi';
 const PLACEHOLDER_IMAGE_URL = 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=600&fit=crop&crop=center';
 
 const CategoryBrandCard = ({ brand }) => {
-  const imageUrl = brand?.brandImage?.imageUrl || PLACEHOLDER_IMAGE_URL;
+  const imageUrl = brand?.website || PLACEHOLDER_IMAGE_URL;
   const imageAltText = brand?.brandImage?.altText || brand?.name || 'Fashion brand';
 
   return (
@@ -42,26 +42,24 @@ const CategoryBrandCard = ({ brand }) => {
                 </div>
               </div>
           )}
-        </div>
-
-        {/* Content Section */}
-        <div className="p-6">
-          {/* brand Name */}
-          <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1 group-hover:text-black transition-colors duration-200">
+          <div className="absolute bottom-0 left-0 w-full p-6 text-white opacity-0 group-hover:opacity-100 transition-all duration-300">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-1 group-hover:text-white transition-colors duration-200">
             {brand?.name || 'Fashion brand'}
-          </h3>
+            </h3>
 
-          {/* Description */}
-          {brand?.description && (
-              <p className="text-sm text-gray-600 line-clamp-2 leading-relaxed">
-                {brand.description}
-              </p>
-          )}
+            {/* Description */}
+            {brand?.description && (
+                <p className="text-sm text-white line-clamp-2 leading-relaxed">
+                  {brand.description}
+                </p>
+            )}
 
-          {/* Hover Effect Underline */}
-          <div className="mt-4 flex items-center text-sm font-medium text-gray-900 group-hover:text-black">
-            <span>Khám phá</span>
-            <div className="ml-2 h-px flex-1 bg-gray-200 group-hover:bg-gray-900 transition-colors duration-300" />
+            {/* Hover Effect Underline */}
+            <div className="mt-4 flex items-center text-sm font-medium text-gray-900 group-hover:text-white">
+              <span>Khám phá</span>
+              <div className="ml-2 h-px flex-1 bg-gray-200 group-hover:bg-white transition-colors duration-300" />
+            </div>
+
           </div>
         </div>
       </Link>
